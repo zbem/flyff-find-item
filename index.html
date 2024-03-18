@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" lang="en" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>飞瘾犯了</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>飞瘾犯了</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 		color: #8007f7;
 	}
 	[btn_weapon]{
-	 margin:10px 0;
+		margin:10px 0;
 	}
 
 	[bb_info]{
@@ -47,7 +47,7 @@
 	/* 定义自定义光标样式 */
 	/* 如果浏览器不支持自定义光标，将使用 'auto' 作为备用 */
 	.custom-cursor {
-		cursor: url('imgpng'), auto;
+		cursor: url('img/鼠标.png'), auto;
 	}
 
 </style>
@@ -110,7 +110,7 @@
 			<div class="row" weapon_list></div>
 			<hr>
 		</div>
-		
+
 		<div msg class="col-xs-9 pull-right" >
 			<hr>
 			<div pet_msg_div></div>
@@ -119,7 +119,7 @@
 			<div txt_div></div>
 			<div suc_div></div>
 		</div>
-		
+
 	</div>
 </div>
 
@@ -129,7 +129,7 @@
 		$('body').addClass('custom-cursor');
 
 		// 如果你想在某个特定元素上更改鼠标图标，可以这样做：
-		 $('[btn_weapon]').addClass('custom-cursor');
+		$('[btn_weapon]').addClass('custom-cursor');
 	});
 
 	init();
@@ -203,7 +203,7 @@
 
 		var str = '<div class="alert alert-info" pet_info  pet_lv="0" ><div class="row">';
 		str+='<div class="col-xs-12" ><span style="color: #da6443">'+pet.name+'</span></div><br>';
-		str+='<div class="col-xs-6" ><img src='+pet.name+'"img/pet/.png" style="width: 80px; height: 70px;" alt="'+pet.name+'"></div>';
+		str+='<div class="col-xs-6" ><img src="img/pet/'+pet.name+'.png" style="width: 80px; height: 70px;" alt="'+pet.name+'"></div>';
 		str+='<div class="col-xs-6">等级:<span style="color: #fb37b1" pet_lv_str>F级</span></div><br>';
 		//str+='<div class="col-xs-6">属性:<span style="color: #fb37b1" >'+pet.attributeStr+'+</span><span pet_value>'+pet.value+'</span></div>';
 		str+='</div><br><div class="row">';
@@ -304,7 +304,7 @@
 				now_lv = lv;
 				str += '<span color_green>恭喜洗出等级:'+ lv+'</span>';
 				$("[lv_"+pet.lv+"]").remove();
-				$("[pet_img_div]").append('<img lv_'+pet.lv+' img_lv src='+pet.list[i].name+'"img/pet/等级.png" alt="等级">');
+				$("[pet_img_div]").append('<img lv_'+pet.lv+' img_lv src="img/pet/等级'+pet.list[i].name+'.png" alt="等级">');
 				break;
 			}
 		}
@@ -585,7 +585,7 @@
 	function errorMsg(str){
 		$("[txt_div]").prepend("<p class='alert alert-info' error_msg>"+str+"</p>");
 	}
-	
+
 </script>
 
 </body>
