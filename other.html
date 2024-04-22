@@ -13,7 +13,8 @@
 <link href="css/bootstrap.min.css?v=202404020006" rel="stylesheet" type="text/css">
 <link href="css/style.css?v=202404020006" rel="stylesheet" type="text/css">
 
-<div class="container" style="padding-top: 20px;border: 1px solid;" >
+<div class="container" >
+	<hr>
 	<div class="row" >
 		<div class="col-xs-3 pull-left">
 			<div class="row">
@@ -22,38 +23,6 @@
 				</div>
 			</div>
 			<hr>
-			<div class="row">
-				<div class="col-xs-6">
-					<button class="btn btn-success" onclick="init_model()" >召唤看板娘</button>
-				</div>
-			</div>
-			<hr>
-			<div class="row">
-				<div class="col-xs-6">
-					<button class="btn btn-success" onclick="clear_div()" >清空信息</button>
-				</div>
-			</div>
-			<hr>
-			<div class="row hide" show_time>
-				<div style="font-size: 20px;color: #ffffff;">时装达人秀</div>
-				<div class="ibox float-e-margins">
-					<div class="ibox-content">
-						<div class="carousel slide" id="carousel1">
-							<div class="carousel-inner">
-								<div class="item active">
-									<img class="img-responsive" style="width: 300px;height: 320px" src="img/show/可爱的小游.png" alt="可爱的小游">
-								</div>
-							</div>
-							<a data-slide="prev" href="#carousel1" class="left carousel-control">
-								<span class="icon-prev"></span>
-							</a>
-							<a data-slide="next" href="#carousel1" class="right carousel-control">
-								<span class="icon-next"></span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 
 		<div class="col-xs-9" right_msg_div >
@@ -140,7 +109,7 @@
 					<span>名称:${item.name.cns}</span><br>
 					<span>描述:${item.description.cns}</span><br>
 					<span>当前等级:${item.level}</span><br>
-					<span>${JSON.stringify(item)}</span>
+					<span style="word-break: break-all;">${JSON.stringify(item)}</span>
 				</div>
 				`);
 			}
